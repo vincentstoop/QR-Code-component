@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 html {
     font-size: .9375rem;
 }
@@ -5,7 +9,7 @@ html {
 body {
     font-family: 'Outfit', sans-serif;
     display: grid;
-    grid-template-columns: minmax(1.71875rem, 1fr) auto minmax(1.71875rem, 1fr);
+    grid-template-columns: minmax(1.71875rem, 1fr) 320px minmax(1.71875rem, 1fr);
     grid-template-areas: '. main .';
     place-items: center;
     background-color: hsl(212 45% 89%);
@@ -13,9 +17,13 @@ body {
 }
 
 .container {
+    grid-area: main;
+}
+
+.card {
     background-color: hsl(0 0% 100%);
     padding: 1rem;
-    grid-area: main;
+    /* grid-area: main; */
     display: grid;
     place-items: center;
     border-radius: 1rem;
